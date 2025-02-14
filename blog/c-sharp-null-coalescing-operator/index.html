@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Null Coalescing Operator (??) in C# :: Mishel Shaji</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Null Coalescing Operator (??) in C sharp is used to check for null values. It is a binary operator. If the value is null, the null coalescing operator returns the left operand and otherwise, it returns the right operand." />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://mishelshaji.com/blog/c-sharp-null-coalescing-operator/" />
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://mishelshaji.com/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://mishelshaji.com/img/theme-colors/green.png">
+  <link rel="apple-touch-icon" href="https://mishelshaji.com/img/theme-colors/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Null Coalescing Operator (??) in C#">
+<meta property="og:description" content="The Null Coalescing Operator (??) in C sharp is used to check for null values. It is a binary operator. If the value is null, the null coalescing operator returns the left operand and otherwise, it returns the right operand." />
+<meta property="og:url" content="https://mishelshaji.com/blog/c-sharp-null-coalescing-operator/" />
+<meta property="og:site_name" content="Mishel Shaji" />
+
+  
+    <meta property="og:image" content="https://mishelshaji.com/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+  <meta property="article:section" content="C Sharp" />
+
+
+  <meta property="article:published_time" content="2025-02-14 22:10:43 &#43;0530 IST" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="green">
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://mishelshaji.com/">
+  <div class="logo">
+    mishelShaji
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/contact">Contact</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="/contact" >Contact</a></li>
+        
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://mishelshaji.com/blog/c-sharp-null-coalescing-operator/">Null Coalescing Operator (??) in C#</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-02-14</time><span class="post-author">Mishel Shaji</span>
+    
+<span class="post-reading-time">2 min read (223 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://mishelshaji.com/tags/csharp/">csharp</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#using-null-coalescing-operator">Using Null Coalescing Operator</a>
+      <ul>
+        <li><a href="#example-with-if-else">Example with if-else:</a></li>
+        <li><a href="#example-with-ternary-operator">Example with ternary operator:</a></li>
+        <li><a href="#example-with-null-coalescing-operator">Example with Null coalescing operator:</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-with-value-types">Using with value types</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <p>The Null Coalescing Operator (??) in C sharp is used to check for null values. It is a binary operator. If the value is null, the null coalescing operator returns the left operand and otherwise, it returns the right operand.</p>
+<p>Here&rsquo;s an example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int?</span> i = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> res = i ?? <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Displays 100</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(res);
+</span></span></code></pre></div><h2 id="using-null-coalescing-operator">Using Null Coalescing Operator<a href="#using-null-coalescing-operator" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>With the null coalescing operator we can avoid the use of if-else statements to set a default value if a variable is null.</p>
+<h3 id="example-with-if-else">Example with if-else:<a href="#example-with-if-else" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> name = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> res = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Using If Else</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (name <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>    res = <span style="color:#e6db74">&#34;John Doe&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    res = name;
+</span></span></code></pre></div><h3 id="example-with-ternary-operator">Example with ternary operator:<a href="#example-with-ternary-operator" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> name = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> res = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>res = name <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">null</span> ? <span style="color:#e6db74">&#34;John Doe&#34;</span> : name;
+</span></span></code></pre></div><h3 id="example-with-null-coalescing-operator">Example with Null coalescing operator:<a href="#example-with-null-coalescing-operator" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> name = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> res = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>res = name ?? <span style="color:#e6db74">&#34;John Doe&#34;</span>;
+</span></span></code></pre></div><h2 id="using-with-value-types">Using with value types<a href="#using-with-value-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>The left operand of the null coalescing operator should be either a nullable type or a reference type. We cannot use a value type as the left operand.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// The left operand (i) should not be a value type</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> res = i ?? <span style="color:#ae81ff">100</span>; <span style="color:#75715e">// Error</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(res);
+</span></span></code></pre></div><p>Using the null coalescing operator makes the code much more readable and easy to understand.</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://mishelshaji.com/blog/how-to-fix-an-invalid-form-control-with-name-is-not-focusable/">
+                <span class="button__text">How to Fix an Invalid Form Control With Name Is Not Focusable Error</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/mirus-ua/hugo-theme-re-terminal" target="_blank">Theme</a> made by <a href="https://github.com/mirus-ua" target="_blank">Mirus</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
