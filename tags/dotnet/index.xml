@@ -6,7 +6,80 @@
     <description>Recent content in Dotnet on Mishel Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Feb 2025 01:57:34 +0000</lastBuildDate><atom:link href="https://mishelshaji.com/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Feb 2025 15:20:45 +0530</lastBuildDate><atom:link href="https://mishelshaji.com/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Use Entity Framework Core in a Console Application</title>
+      <link>https://mishelshaji.com/blog/how-to-use-entity-framework-core-in-a-console-application/</link>
+      <pubDate>Fri, 14 Feb 2025 15:20:45 +0530</pubDate>
+      
+      <guid>https://mishelshaji.com/blog/how-to-use-entity-framework-core-in-a-console-application/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Entity framework core is an ORM (Object Relational Mapper) for .NET. It can be configured to work with different databases like SQL Server, MySQL, SQLite, etc through database providers. In this post, we&amp;rsquo;ll learn to use Entity Framework in a .NET Core Console application.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-console-application&#34;&gt;Create a Console Application&lt;/h2&gt;
+&lt;p&gt;Create a new .NET Core console application in Visual Studio. Select .NET 6 or newer as the framework version.&lt;/p&gt;
+&lt;h2 id=&#34;install-entity-framework&#34;&gt;Install Entity Framework&lt;/h2&gt;
+&lt;p&gt;The next step is to install the required packages. This includes Entity Framework Core, MSSQL Database Provider, and Entity Framework Core Tools.&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Entity framework core is an ORM (Object Relational Mapper) for .NET. It can be configured to work with different databases like SQL Server, MySQL, SQLite, etc through database providers. In this post, we&amp;rsquo;ll learn to use Entity Framework in a .NET Core Console application.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-console-application&#34;&gt;Create a Console Application&lt;/h2&gt;
+&lt;p&gt;Create a new .NET Core console application in Visual Studio. Select .NET 6 or newer as the framework version.&lt;/p&gt;
+&lt;h2 id=&#34;install-entity-framework&#34;&gt;Install Entity Framework&lt;/h2&gt;
+&lt;p&gt;The next step is to install the required packages. This includes Entity Framework Core, MSSQL Database Provider, and Entity Framework Core Tools.&lt;/p&gt;
+&lt;p&gt;The Tools package is optional. However, if you want to use commands like Add-Migration and Update-Database, this package is required.&lt;/p&gt;
+&lt;p&gt;To install these packages, open NuGet Package Manager Console and run the following Commands. NuGet Package Manager Console can be opened from &lt;strong&gt;Tools -&amp;gt; NuGetPackage Manager -&amp;gt; Package Manager Console&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Install-Package Microsoft.EntityFrameworkCore -Version 6.0.6
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 6.0.6
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Install-Package Microsoft.EntityFrameworkCore.Tools -Version 6.0.6
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-db-context&#34;&gt;Create DB Context&lt;/h2&gt;
+&lt;p&gt;After installing the required packages, we have to create a DBContext. So, create a new class called ApplicationDbContext and add the following code to it. I recommend adding it into a folder called Data. The ApplicationDbContext class should inherit the DbContext class. You have to add a reference to Microsoft.EntityFrameworkCore.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; Microsoft.EntityFrameworkCore;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; ConsoleApp3.Data;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;internal&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ApplicationDbContext&lt;/span&gt;: DbContext
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The next step is to provide Entity Framework with database configurations and a connection string. For that, we have to override the OnConfiguring method of our ApplicationDbContext class.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-model&#34;&gt;Create a Model&lt;/h2&gt;
+&lt;p&gt;As the last step, we have to create a model. In this example, I am creating a model to save the Name and Value of a color.&lt;/p&gt;
+&lt;p&gt;Add the model to the database context.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; ConsoleApp3.Models;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; Microsoft.EntityFrameworkCore;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; ConsoleApp3.Data;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;internal&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ApplicationDbContext&lt;/span&gt;: DbContext
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;override&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;base&lt;/span&gt;.OnConfiguring(optionsBuilder);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        optionsBuilder.UseSqlServer(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Server=.;Database=MyDb;Integrated Security=true&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; DbSet&amp;lt;Color&amp;gt; Colors { &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt;; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;execute-query&#34;&gt;Execute Query&lt;/h2&gt;
+&lt;p&gt;Finally, let us execute some queries.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; ConsoleApp3.Data;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; ConsoleApp3.Models;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; db = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ApplicationDbContext();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; colors = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Color[]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Color(){Name = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Red&amp;#34;&lt;/span&gt;, Value = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;FF0000&amp;#34;&lt;/span&gt;},
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Color(){Name = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Green&amp;#34;&lt;/span&gt;, Value = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;00FF00&amp;#34;&lt;/span&gt;},
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Color(){Name = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Blue&amp;#34;&lt;/span&gt;, Value = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0000FF&amp;#34;&lt;/span&gt;},
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;db.Colors.AddRange(colors);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;db.SaveChanges();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Starting with .NET 6 (C# 10), we can avoid the explicit type declaration for the arrays and other types.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this post, we learned to use Entity Framework in a .Net Core Console Application. If you have any questions, let me know in the comments below.&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Datatypes in C Sharp</title>
       <link>https://mishelshaji.com/blog/c-sharp-datatypes/</link>
