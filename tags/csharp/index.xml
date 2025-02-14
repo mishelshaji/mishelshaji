@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Csharp on Mishel Shaji</title>
-    <link>https://filedn.com/lLgwXnLthJNFlyefFoDVyYJ/tags/csharp/</link>
+    <link>https://mishelshaji.com/tags/csharp/</link>
     <description>Recent content in Csharp on Mishel Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Feb 2025 01:57:34 +0000</lastBuildDate><atom:link href="https://filedn.com/lLgwXnLthJNFlyefFoDVyYJ/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Feb 2025 01:57:34 +0000</lastBuildDate><atom:link href="https://mishelshaji.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Datatypes in C Sharp</title>
-      <link>https://filedn.com/lLgwXnLthJNFlyefFoDVyYJ/blog/c-sharp-datatypes/</link>
+      <link>https://mishelshaji.com/blog/c-sharp-datatypes/</link>
       <pubDate>Fri, 14 Feb 2025 01:57:34 +0000</pubDate>
       
-      <guid>https://filedn.com/lLgwXnLthJNFlyefFoDVyYJ/blog/c-sharp-datatypes/</guid>
+      <guid>https://mishelshaji.com/blog/c-sharp-datatypes/</guid>
       <description>&lt;h1 id=&#34;important-data-types-in-c&#34;&gt;Important Data Types in C#&lt;/h1&gt;
 &lt;p&gt;C# is a statically typed language, which means that the type of a variable is known at compile time. Understanding the various data types in C# is crucial for effective programming. In this blog post, we will explore the important data types in C#, categorized into value types, reference types, and special types.&lt;/p&gt;
 &lt;h2 id=&#34;1-value-types&#34;&gt;1. Value Types&lt;/h2&gt;
