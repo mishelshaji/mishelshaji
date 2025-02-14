@@ -6,7 +6,37 @@
     <description>Recent content in Blogs on Mishel Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Feb 2025 19:33:48 +0530</lastBuildDate><atom:link href="https://mishelshaji.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Feb 2025 21:34:43 +0530</lastBuildDate><atom:link href="https://mishelshaji.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Fix an Invalid Form Control With Name Is Not Focusable Error</title>
+      <link>https://mishelshaji.com/blog/how-to-fix-an-invalid-form-control-with-name-is-not-focusable/</link>
+      <pubDate>Fri, 14 Feb 2025 21:34:43 +0530</pubDate>
+      
+      <guid>https://mishelshaji.com/blog/how-to-fix-an-invalid-form-control-with-name-is-not-focusable/</guid>
+      <description>&lt;p&gt;When I was trying to create a markdown textbox using SimpleMDE in my Django application.&lt;/p&gt;
+&lt;p&gt;After adding the library, form submission was not working and the following error was displayed in the console.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An invalid form control with name=&amp;lsquo;body&amp;rsquo; is not focusable.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This error was completely new to me and in this post, I will show you how to fix this error.&lt;/p&gt;
+&lt;h2 id=&#34;the-reason&#34;&gt;The reason&lt;/h2&gt;
+&lt;p&gt;In my case, this error was caused due to a required attribute added to the input field.&lt;/p&gt;</description>
+      <content>&lt;p&gt;When I was trying to create a markdown textbox using SimpleMDE in my Django application.&lt;/p&gt;
+&lt;p&gt;After adding the library, form submission was not working and the following error was displayed in the console.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An invalid form control with name=&amp;lsquo;body&amp;rsquo; is not focusable.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This error was completely new to me and in this post, I will show you how to fix this error.&lt;/p&gt;
+&lt;h2 id=&#34;the-reason&#34;&gt;The reason&lt;/h2&gt;
+&lt;p&gt;In my case, this error was caused due to a required attribute added to the input field.&lt;/p&gt;
+
+  &lt;figure class=&#34;left&#34; &gt;
+    &lt;img src=&#34;./images/text-box-causing-error.jpg&#34;   /&gt;
+    
+  &lt;/figure&gt;
+
+
+</content>
+    </item>
+    
     <item>
       <title>Generate Lower Case Urls in Net Core</title>
       <link>https://mishelshaji.com/blog/generate-lower-case-urls-in-net-core/</link>
