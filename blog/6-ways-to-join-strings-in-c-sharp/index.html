@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>6 Ways to Join Strings in C Sharp :: Mishel Shaji</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="In this article, I&#39;ll explain 6 different ways to join strings in C#. We&#39;ll also benchmark these methods to find the fastest and the most efficient way to join strings in C#." />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://mishelshaji.com/blog/6-ways-to-join-strings-in-c-sharp/" />
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://mishelshaji.com/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://mishelshaji.com/img/theme-colors/green.png">
+  <link rel="apple-touch-icon" href="https://mishelshaji.com/img/theme-colors/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="6 Ways to Join Strings in C Sharp">
+<meta property="og:description" content="In this article, I&#39;ll explain 6 different ways to join strings in C#. We&#39;ll also benchmark these methods to find the fastest and the most efficient way to join strings in C#." />
+<meta property="og:url" content="https://mishelshaji.com/blog/6-ways-to-join-strings-in-c-sharp/" />
+<meta property="og:site_name" content="Mishel Shaji" />
+
+  
+    <meta property="og:image" content="https://mishelshaji.com/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+  <meta property="article:section" content="C Sharp" />
+
+  <meta property="article:section" content="How To" />
+
+
+  <meta property="article:published_time" content="2025-02-14 19:24:05 &#43;0530 IST" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+</head>
+<body class="green">
+
+
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://mishelshaji.com/">
+  <div class="logo">
+    mishelShaji
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/contact">Contact</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="/contact" >Contact</a></li>
+        
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://mishelshaji.com/blog/6-ways-to-join-strings-in-c-sharp/">6 Ways to Join Strings in C Sharp</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-02-14</time><span class="post-author">Mishel Shaji</span>
+    
+<span class="post-reading-time">3 min read (513 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://mishelshaji.com/tags/csharp/">csharp</a>&nbsp;
+      
+      #<a href="https://mishelshaji.com/tags/howto/">howto</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-string-concatenation">1) String Concatenation</a></li>
+    <li><a href="#2-string-interpolation">2) String Interpolation</a></li>
+    <li><a href="#3-stringjoin-method">3) String.Join Method</a></li>
+    <li><a href="#4-stringconcat-method">4) String.Concat Method</a></li>
+    <li><a href="#5-string-format-method">5) String Format Method</a></li>
+    <li><a href="#6-string-builder">6) String Builder</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <p>In this article, I&rsquo;ll explain 6 different ways to join strings in C#. We&rsquo;ll also benchmark these methods to find the fastest and the most efficient way to join strings in C#.</p>
+<h2 id="1-string-concatenation">1) String Concatenation<a href="#1-string-concatenation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>This is the most commonly used method to join two or more strings in almost all programming languages. In C# also, we can use the + operator to join two or more strings.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> firstName = <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> lastName = <span style="color:#e6db74">&#34;Doe&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> fullName = firstName + <span style="color:#e6db74">&#34; &#34;</span> + lastName;
+</span></span><span style="display:flex;"><span>Console.WriteLine(fullName);
+</span></span></code></pre></div><p>The problem with this method is that it makes the code less readable and difficult to understand when we use different variables and data types together.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> j = <span style="color:#ae81ff">6</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> result = i + <span style="color:#e6db74">&#34; + &#34;</span> + j + <span style="color:#e6db74">&#34; = &#34;</span> + (i + j);
+</span></span><span style="display:flex;"><span>Console.WriteLine(result);
+</span></span></code></pre></div><p>This code is difficult to read and understand. See how the next method solves this problem.</p>
+<h2 id="2-string-interpolation">2) String Interpolation<a href="#2-string-interpolation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>This is my favorite way to join strings in C#. To use this method, we should add a $ symbol before the string value and wrap variables and expressions in {} brackets.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> j = <span style="color:#ae81ff">6</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> result = <span style="color:#e6db74">$&#34;{i} + {j} = {i + j}&#34;</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(result);
+</span></span></code></pre></div><p>We are not limited to using simple variables here, we can also write expressions in the brackets.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> firstName = <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> lastName = <span style="color:#e6db74">&#34;Doe&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> fullName = <span style="color:#e6db74">$&#34;{firstName.ToUpper()} {lastName.ToUpper()}&#34;</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(fullName);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;The result is { 5\*2 }&#34;</span>);
+</span></span></code></pre></div><h2 id="3-stringjoin-method">3) String.Join Method<a href="#3-stringjoin-method" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>With the string.Join() method, we can join multiple string values separated by a given separator.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> firstName = <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> lastName = <span style="color:#e6db74">&#34;Doe&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> fullName = <span style="color:#66d9ef">string</span>.Join(<span style="color:#e6db74">&#34; &#34;</span>, firstName, lastName);
+</span></span><span style="display:flex;"><span>Console.WriteLine(fullName);
+</span></span></code></pre></div><p>The first parameter this method accepts is a separator. The second parameter is a params array.</p>
+<h2 id="4-stringconcat-method">4) String.Concat Method<a href="#4-stringconcat-method" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Another way to join strings in C# is to use the Concat() method. We can pass multiple strings or an IEnumerable<!-- raw HTML omitted --> type to the method as parameters.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> firstName = <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> lastName = <span style="color:#e6db74">&#34;Doe&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> fullName = <span style="color:#66d9ef">string</span>.Concat(firstName, <span style="color:#e6db74">&#34; &#34;</span>, lastName);
+</span></span><span style="display:flex;"><span>Console.WriteLine(fullName);
+</span></span></code></pre></div><p>Or use the following method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> strings = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">string</span>[] { <span style="color:#e6db74">&#34;One&#34;</span>, <span style="color:#e6db74">&#34;Two&#34;</span>, <span style="color:#e6db74">&#34;Three&#34;</span> };
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#66d9ef">string</span>.Concat(strings));
+</span></span></code></pre></div><h2 id="5-string-format-method">5) String Format Method<a href="#5-string-format-method" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>String formatting is also one of the most commonly used methods in C# to join strings. Here&rsquo;s an example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> firstName = <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> lastName = <span style="color:#e6db74">&#34;Doe&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> age = <span style="color:#ae81ff">25</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> message = <span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;{0} {1} is {2} year old.&#34;</span>, firstName, lastName, age);
+</span></span><span style="display:flex;"><span>Console.WriteLine(message);
+</span></span></code></pre></div><p>We can also pass an array of objects as the parameters. This is different from the Concat() method that can accept only IEnumerable<!-- raw HTML omitted --> as the second parameter.</p>
+<h2 id="6-string-builder">6) String Builder<a href="#6-string-builder" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>String Builder can be used if you want to create and work with large strings. For simple string join operations, use any of the above-mentioned methods.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> firstName = <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> lastName = <span style="color:#e6db74">&#34;Doe&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> builder = <span style="color:#66d9ef">new</span> StringBuilder();
+</span></span><span style="display:flex;"><span>builder.Append(<span style="color:#e6db74">&#34;My Name Is&#34;</span>);
+</span></span><span style="display:flex;"><span>builder.Append(firstName);
+</span></span><span style="display:flex;"><span>builder.Append(<span style="color:#e6db74">&#34; &#34;</span>);
+</span></span><span style="display:flex;"><span>builder.Append(lastName);
+</span></span><span style="display:flex;"><span>builder.AppendLine(<span style="color:#e6db74">&#34;----------&#34;</span>);
+</span></span><span style="display:flex;"><span>builder.AppendFormat(<span style="color:#e6db74">&#34;I am {0} year old&#34;</span>, <span style="color:#ae81ff">25</span>);
+</span></span><span style="display:flex;"><span>Console.WriteLine(builder.ToString());
+</span></span></code></pre></div><p>These are the six different ways to join strings in C#. If you have any questions, let me know in the comments below.</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://mishelshaji.com/blog/last-occurrence-of-a-character-in-c-sharp/">
+                <span class="button__text">Last Occurrence of a Character in C Sharp</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/mirus-ua/hugo-theme-re-terminal" target="_blank">Theme</a> made by <a href="https://github.com/mirus-ua" target="_blank">Mirus</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
