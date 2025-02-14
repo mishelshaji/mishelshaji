@@ -6,7 +6,29 @@
     <description>Recent content on Mishel Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Feb 2025 19:24:05 +0530</lastBuildDate><atom:link href="https://mishelshaji.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Feb 2025 19:33:48 +0530</lastBuildDate><atom:link href="https://mishelshaji.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generate Lower Case Urls in Net Core</title>
+      <link>https://mishelshaji.com/blog/generate-lower-case-urls-in-net-core/</link>
+      <pubDate>Fri, 14 Feb 2025 19:33:48 +0530</pubDate>
+      
+      <guid>https://mishelshaji.com/blog/generate-lower-case-urls-in-net-core/</guid>
+      <description>&lt;p&gt;Every .NET Web applications by default, generate URLs with the first letter of each word capitalized.&lt;/p&gt;
+&lt;p&gt;Mixing lowercase and uppercase letters might become an issue for SEO especially if you use both versions of the same URL.&lt;/p&gt;
+&lt;h2 id=&#34;generate-lower-case-urls&#34;&gt;Generate Lower Case URLs&lt;/h2&gt;
+&lt;p&gt;The tag helpers will generate URLs with mixed casing. To turn this off and generate lowercase URLs, add the following line of code above &lt;code&gt;services.AddControllersWithViews();&lt;/code&gt; statement in the &lt;code&gt;Startup.cs&lt;/code&gt;.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Every .NET Web applications by default, generate URLs with the first letter of each word capitalized.&lt;/p&gt;
+&lt;p&gt;Mixing lowercase and uppercase letters might become an issue for SEO especially if you use both versions of the same URL.&lt;/p&gt;
+&lt;h2 id=&#34;generate-lower-case-urls&#34;&gt;Generate Lower Case URLs&lt;/h2&gt;
+&lt;p&gt;The tag helpers will generate URLs with mixed casing. To turn this off and generate lowercase URLs, add the following line of code above &lt;code&gt;services.AddControllersWithViews();&lt;/code&gt; statement in the &lt;code&gt;Startup.cs&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;services.Configure&amp;lt;RouteOptions&amp;gt;(options =&amp;gt; options.LowercaseUrls = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;services.AddControllersWithViews();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;From now on, all URLs will be generated in lowercase.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;asp-action&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;About&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;asp-controller&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Home&amp;#34;&lt;/span&gt;&amp;gt;About&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Happy coding 👍.&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>6 Ways to Join Strings in C Sharp</title>
       <link>https://mishelshaji.com/blog/6-ways-to-join-strings-in-c-sharp/</link>
