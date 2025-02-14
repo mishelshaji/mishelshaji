@@ -301,17 +301,61 @@
     </item>
     
     <item>
-      <title>My First Post</title>
+      <title>Welcome to My Blog - My First Post</title>
       <link>https://mishelshaji.com/blog/my-first-post/</link>
       <pubDate>Thu, 13 Feb 2025 18:00:41 +0530</pubDate>
       
       <guid>https://mishelshaji.com/blog/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
-      <content>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;
+      <description>&lt;h1 id=&#34;why-i-started-this-blog&#34;&gt;Why I Started This Blog&lt;/h1&gt;
+&lt;p&gt;Starting a blog is a significant step for anyone passionate about a subject, and for me, that subject is coding. As I embark on this journey, I want to share the reasons behind my decision to create this blog and what I hope to achieve through it.&lt;/p&gt;
+&lt;h2 id=&#34;1-why-i-like-to-code&#34;&gt;1. Why I Like to Code&lt;/h2&gt;
+&lt;p&gt;Coding has always fascinated me. The ability to create something from nothing, to solve complex problems, and to bring ideas to life through programming is incredibly rewarding. Here are a few reasons why I love coding:&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;why-i-started-this-blog&#34;&gt;Why I Started This Blog&lt;/h1&gt;
+&lt;p&gt;Starting a blog is a significant step for anyone passionate about a subject, and for me, that subject is coding. As I embark on this journey, I want to share the reasons behind my decision to create this blog and what I hope to achieve through it.&lt;/p&gt;
+&lt;h2 id=&#34;1-why-i-like-to-code&#34;&gt;1. Why I Like to Code&lt;/h2&gt;
+&lt;p&gt;Coding has always fascinated me. The ability to create something from nothing, to solve complex problems, and to bring ideas to life through programming is incredibly rewarding. Here are a few reasons why I love coding:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Creativity&lt;/strong&gt;: Coding is a form of art. Just like a painter uses colors to create a masterpiece, I use code to build applications, websites, and tools that can make a difference. The creative process involved in coding allows me to express my ideas and innovate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Problem-Solving&lt;/strong&gt;: Every coding challenge is a puzzle waiting to be solved. I enjoy the thrill of breaking down complex problems into manageable parts and finding efficient solutions. This analytical aspect of coding keeps my mind sharp and engaged.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Continuous Learning&lt;/strong&gt;: The tech industry is always evolving, and there’s always something new to learn. Whether it’s a new programming language, framework, or technology, coding keeps me on my toes and encourages lifelong learning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Impact&lt;/strong&gt;: Coding has the power to change lives. Whether it’s developing software that improves productivity or creating applications that help people connect, I love knowing that my work can have a positive impact on others.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-i-want-to-share-what-i-learn&#34;&gt;2. I Want to Share What I Learn&lt;/h2&gt;
+&lt;p&gt;One of the most fulfilling aspects of coding is the community that surrounds it. I’ve learned so much from others, and I want to give back by sharing my knowledge and experiences. Here’s why sharing is important to me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Knowledge Sharing&lt;/strong&gt;: By documenting what I learn, I can help others who are on a similar journey. Whether they are beginners looking for guidance or experienced developers seeking new insights, I hope my blog can serve as a valuable resource.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Building a Community&lt;/strong&gt;: I believe that sharing knowledge fosters collaboration and growth. Through this blog, I hope to connect with like-minded individuals, exchange ideas, and learn from each other’s experiences.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Personal Growth&lt;/strong&gt;: Teaching others is one of the best ways to solidify my own understanding. Writing about coding concepts and sharing my projects will help me reinforce my knowledge and identify areas where I can improve.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-i-also-use-this-website-as-a-reference&#34;&gt;3. I Also Use This Website as a Reference&lt;/h2&gt;
+&lt;p&gt;In addition to sharing my knowledge, I see this blog as a personal reference tool. Here’s how it serves that purpose:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Documentation of My Journey&lt;/strong&gt;: As I learn new technologies and techniques, I want to document my progress. This blog will serve as a chronological record of my growth as a developer, allowing me to look back and see how far I’ve come.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Quick Reference&lt;/strong&gt;: Sometimes, I forget certain coding concepts or syntax. By writing about them, I create a quick reference guide for myself. This way, I can easily revisit topics I’ve covered and refresh my memory when needed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Encouragement to Stay Consistent&lt;/strong&gt;: Maintaining a blog encourages me to stay consistent in my learning. Knowing that I’ll be sharing my insights with others motivates me to keep exploring and experimenting with new ideas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Starting this blog is an exciting endeavor for me. It’s a platform where I can express my passion for coding, share my knowledge, and document my journey. I hope to create a space where others can learn, grow, and connect with the coding community. Thank you for joining me on this adventure, and I look forward to sharing my experiences with you!&lt;/p&gt;
 </content>
     </item>
     
