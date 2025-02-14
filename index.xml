@@ -29,11 +29,28 @@
 &lt;p&gt;In my case, this error was caused due to a required attribute added to the input field.&lt;/p&gt;
 
   &lt;figure class=&#34;left&#34; &gt;
-    &lt;img src=&#34;./images/text-box-causing-error.jpg&#34;   /&gt;
+    &lt;img src=&#34;./images/text-box-causing-error.jpg&#34;  alt=&#34;Error sample&#34;   /&gt;
     
   &lt;/figure&gt;
 
 
+&lt;p&gt;Note that the CSS display property of the element was set to none by SimpleMDE library to hide it from the UI.&lt;/p&gt;
+&lt;p&gt;Usually, the browser displays an error message if there are any validation mistakes in the form field.&lt;/p&gt;
+
+  &lt;figure class=&#34;left&#34; &gt;
+    &lt;img src=&#34;./images/error-message-displayed-by-chrome.jpg&#34;  alt=&#34;Error message displayed by chrome.&#34;   /&gt;
+    
+  &lt;/figure&gt;
+
+
+&lt;p&gt;But in this case, Chrome was unable to display the error message of the element as it was hidden from the UI. This caused the error.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-fix&#34;&gt;How to fix?&lt;/h2&gt;
+&lt;p&gt;This error can be easily fixed by removing the required attribute from the input field or the textarea tag.&lt;/p&gt;
+&lt;p&gt;You can either remove the HTML markup or use JavaScript to remove the required attribute if you are using any form creation libraries.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;getElementById&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;element_id&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;removeAttribute&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;element_id&lt;/code&gt; with the id of the element that causes this error.&lt;/p&gt;
+&lt;h2 id=&#34;share-your-thoughts&#34;&gt;Share your thoughts&lt;/h2&gt;
+&lt;p&gt;Are there any other ways to solve this problem? Let me know in the comments below.&lt;/p&gt;
 </content>
     </item>
     

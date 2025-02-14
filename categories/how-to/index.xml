@@ -6,7 +6,54 @@
     <description>Recent content in How To on Mishel Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Feb 2025 19:33:48 +0530</lastBuildDate><atom:link href="https://mishelshaji.com/categories/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Feb 2025 21:34:43 +0530</lastBuildDate><atom:link href="https://mishelshaji.com/categories/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Fix an Invalid Form Control With Name Is Not Focusable Error</title>
+      <link>https://mishelshaji.com/blog/how-to-fix-an-invalid-form-control-with-name-is-not-focusable/</link>
+      <pubDate>Fri, 14 Feb 2025 21:34:43 +0530</pubDate>
+      
+      <guid>https://mishelshaji.com/blog/how-to-fix-an-invalid-form-control-with-name-is-not-focusable/</guid>
+      <description>&lt;p&gt;When I was trying to create a markdown textbox using SimpleMDE in my Django application.&lt;/p&gt;
+&lt;p&gt;After adding the library, form submission was not working and the following error was displayed in the console.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An invalid form control with name=&amp;lsquo;body&amp;rsquo; is not focusable.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This error was completely new to me and in this post, I will show you how to fix this error.&lt;/p&gt;
+&lt;h2 id=&#34;the-reason&#34;&gt;The reason&lt;/h2&gt;
+&lt;p&gt;In my case, this error was caused due to a required attribute added to the input field.&lt;/p&gt;</description>
+      <content>&lt;p&gt;When I was trying to create a markdown textbox using SimpleMDE in my Django application.&lt;/p&gt;
+&lt;p&gt;After adding the library, form submission was not working and the following error was displayed in the console.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An invalid form control with name=&amp;lsquo;body&amp;rsquo; is not focusable.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This error was completely new to me and in this post, I will show you how to fix this error.&lt;/p&gt;
+&lt;h2 id=&#34;the-reason&#34;&gt;The reason&lt;/h2&gt;
+&lt;p&gt;In my case, this error was caused due to a required attribute added to the input field.&lt;/p&gt;
+
+  &lt;figure class=&#34;left&#34; &gt;
+    &lt;img src=&#34;./images/text-box-causing-error.jpg&#34;  alt=&#34;Error sample&#34;   /&gt;
+    
+  &lt;/figure&gt;
+
+
+&lt;p&gt;Note that the CSS display property of the element was set to none by SimpleMDE library to hide it from the UI.&lt;/p&gt;
+&lt;p&gt;Usually, the browser displays an error message if there are any validation mistakes in the form field.&lt;/p&gt;
+
+  &lt;figure class=&#34;left&#34; &gt;
+    &lt;img src=&#34;./images/error-message-displayed-by-chrome.jpg&#34;  alt=&#34;Error message displayed by chrome.&#34;   /&gt;
+    
+  &lt;/figure&gt;
+
+
+&lt;p&gt;But in this case, Chrome was unable to display the error message of the element as it was hidden from the UI. This caused the error.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-fix&#34;&gt;How to fix?&lt;/h2&gt;
+&lt;p&gt;This error can be easily fixed by removing the required attribute from the input field or the textarea tag.&lt;/p&gt;
+&lt;p&gt;You can either remove the HTML markup or use JavaScript to remove the required attribute if you are using any form creation libraries.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;getElementById&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;element_id&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;removeAttribute&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;element_id&lt;/code&gt; with the id of the element that causes this error.&lt;/p&gt;
+&lt;h2 id=&#34;share-your-thoughts&#34;&gt;Share your thoughts&lt;/h2&gt;
+&lt;p&gt;Are there any other ways to solve this problem? Let me know in the comments below.&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Generate Lower Case Urls in Net Core</title>
       <link>https://mishelshaji.com/blog/generate-lower-case-urls-in-net-core/</link>
