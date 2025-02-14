@@ -7,7 +7,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Important Data Types in C# C# is a statically typed language, which means that the type of a variable is known at compile time. Understanding the various data types in C# is crucial for effective programming. In this blog post, we will explore the important data types in C#, categorized into value types, reference types, and special types.
-1. Value Types Value types hold their data directly. When you assign a value type to another variable, a copy of the value is made. The most commonly used value types in C# include:
+Understanding Important Data Types in C# C# is a strongly typed language that provides a rich set of built-in data types. These data types can be broadly categorized into value types and reference types. Understanding these types is crucial for effective programming, as they determine how data is stored, accessed, and manipulated in memory. In this blog post, we will explore the important data types in C#, including their storage sizes, minimum and maximum values, and provide code samples for each type.
 " />
 <meta name="keywords" content="" />
 
@@ -47,7 +47,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Datatypes in C Sharp">
 <meta property="og:description" content="Important Data Types in C# C# is a statically typed language, which means that the type of a variable is known at compile time. Understanding the various data types in C# is crucial for effective programming. In this blog post, we will explore the important data types in C#, categorized into value types, reference types, and special types.
-1. Value Types Value types hold their data directly. When you assign a value type to another variable, a copy of the value is made. The most commonly used value types in C# include:
+Understanding Important Data Types in C# C# is a strongly typed language that provides a rich set of built-in data types. These data types can be broadly categorized into value types and reference types. Understanding these types is crucial for effective programming, as they determine how data is stored, accessed, and manipulated in memory. In this blog post, we will explore the important data types in C#, including their storage sizes, minimum and maximum values, and provide code samples for each type.
 " />
 <meta property="og:url" content="https://mishelshaji.com/blog/c-sharp-datatypes/" />
 <meta property="og:site_name" content="Mishel Shaji" />
@@ -148,7 +148,7 @@
   </h1>
   <div class="post-meta"><time class="post-date">2025-02-14</time>
     
-<span class="post-reading-time">3 min read (440 words)</span></div>
+<span class="post-reading-time">6 min read (1173 words)</span></div>
 
   
     <span class="post-tags">
@@ -170,30 +170,32 @@
       </h2>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-value-types">1. Value Types</a>
+    <li><a href="#value-types">Value Types</a>
       <ul>
-        <li><a href="#a-integral-types">a. Integral Types</a></li>
-        <li><a href="#b-floating-point-types">b. Floating-Point Types</a></li>
-        <li><a href="#c-decimal-type">c. Decimal Type</a></li>
-        <li><a href="#d-boolean-type">d. Boolean Type</a></li>
-        <li><a href="#e-character-type">e. Character Type</a></li>
+        <li><a href="#1-byte">1. <strong>byte</strong></a></li>
+        <li><a href="#2-sbyte">2. <strong>sbyte</strong></a></li>
+        <li><a href="#3-short">3. <strong>short</strong></a></li>
+        <li><a href="#4-ushort">4. <strong>ushort</strong></a></li>
+        <li><a href="#5-int">5. <strong>int</strong></a></li>
+        <li><a href="#6-uint">6. <strong>uint</strong></a></li>
+        <li><a href="#7-long">7. <strong>long</strong></a></li>
+        <li><a href="#8-ulong">8. <strong>ulong</strong></a></li>
+        <li><a href="#9-float">9. <strong>float</strong></a></li>
+        <li><a href="#10-decimal">10. <strong>decimal</strong></a></li>
+        <li><a href="#11-bool">11. <strong>bool</strong></a></li>
+        <li><a href="#12-char">12. <strong>char</strong></a></li>
       </ul>
     </li>
-    <li><a href="#2-reference-types">2. Reference Types</a>
+    <li><a href="#reference-types">Reference Types</a>
       <ul>
-        <li><a href="#a-string-type">a. String Type</a></li>
-        <li><a href="#b-object-type">b. Object Type</a></li>
-        <li><a href="#c-arrays">c. Arrays</a></li>
-        <li><a href="#d-classes">d. Classes</a></li>
+        <li><a href="#1-string">1. <strong>string</strong></a></li>
+        <li><a href="#2-class">2. <strong>class</strong></a></li>
+        <li><a href="#3-list">3. <strong>list</strong></a></li>
+        <li><a href="#4-array">4. <strong>array</strong></a></li>
+        <li><a href="#5-dictionary">5. <strong>dictionary</strong></a></li>
       </ul>
     </li>
-    <li><a href="#3-special-types">3. Special Types</a>
-      <ul>
-        <li><a href="#a-nullable-types">a. Nullable Types</a></li>
-        <li><a href="#b-dynamic-type">b. Dynamic Type</a></li>
-      </ul>
-    </li>
-    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
     </div>
@@ -202,102 +204,211 @@
   <div class="post-content"><div>
         <h1 id="important-data-types-in-c">Important Data Types in C#<a href="#important-data-types-in-c" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>C# is a statically typed language, which means that the type of a variable is known at compile time. Understanding the various data types in C# is crucial for effective programming. In this blog post, we will explore the important data types in C#, categorized into value types, reference types, and special types.</p>
-<h2 id="1-value-types">1. Value Types<a href="#1-value-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>Value types hold their data directly. When you assign a value type to another variable, a copy of the value is made. The most commonly used value types in C# include:</p>
-<h3 id="a-integral-types">a. Integral Types<a href="#a-integral-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h1 id="understanding-important-data-types-in-c">Understanding Important Data Types in C#<a href="#understanding-important-data-types-in-c" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>C# is a strongly typed language that provides a rich set of built-in data types. These data types can be broadly categorized into <strong>value types</strong> and <strong>reference types</strong>. Understanding these types is crucial for effective programming, as they determine how data is stored, accessed, and manipulated in memory. In this blog post, we will explore the important data types in C#, including their storage sizes, minimum and maximum values, and provide code samples for each type.</p>
+<h2 id="value-types">Value Types<a href="#value-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Value types hold their data directly. When you assign a value type to a new variable, a copy of the value is made. This means that each variable has its own copy of the data. Here are the key value types in C#:</p>
+<h3 id="1-byte">1. <strong>byte</strong><a href="#1-byte" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li>
-<p><strong><code>int</code></strong>: Represents a 32-bit signed integer.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> age = <span style="color:#ae81ff">30</span>;
-</span></span></code></pre></div></li>
-<li>
-<p><strong><code>long</code></strong>: Represents a 64-bit signed integer.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">long</span> population = <span style="color:#ae81ff">7800000000L</span>;
-</span></span></code></pre></div></li>
-<li>
-<p><strong><code>short</code></strong>: Represents a 16-bit signed integer.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">short</span> temperature = -<span style="color:#ae81ff">5</span>;
-</span></span></code></pre></div></li>
-<li>
-<p><strong><code>byte</code></strong>: Represents an 8-bit unsigned integer.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">byte</span> level = <span style="color:#ae81ff">255</span>;
-</span></span></code></pre></div></li>
+<li><strong>Storage Size</strong>: 1 byte</li>
+<li><strong>Min Value</strong>: 0</li>
+<li><strong>Max Value</strong>: 255</li>
+<li><strong>Type</strong>: Value</li>
 </ul>
-<h3 id="b-floating-point-types">b. Floating-Point Types<a href="#b-floating-point-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>The <code>byte</code> data type is an 8-bit unsigned integer. It is commonly used for storing binary data or when you need to work with small numbers.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">byte</span> b = <span style="color:#ae81ff">255</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Byte: {b}, Min: {byte.MinValue}, Max: {byte.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h3 id="2-sbyte">2. <strong>sbyte</strong><a href="#2-sbyte" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li>
-<p><strong><code>float</code></strong>: Represents a single-precision 32-bit floating point.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">float</span> pi = <span style="color:#ae81ff">3.14f</span>;
-</span></span></code></pre></div></li>
-<li>
-<p><strong><code>double</code></strong>: Represents a double-precision 64-bit floating point.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">double</span> e = <span style="color:#ae81ff">2.718281828459045</span>;
-</span></span></code></pre></div></li>
+<li><strong>Storage Size</strong>: 1 byte</li>
+<li><strong>Min Value</strong>: -128</li>
+<li><strong>Max Value</strong>: 127</li>
+<li><strong>Type</strong>: Value</li>
 </ul>
-<h3 id="c-decimal-type">c. Decimal Type<a href="#c-decimal-type" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>The <code>sbyte</code> data type is an 8-bit signed integer. It is useful when you need to store small signed numbers.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">sbyte</span> sb = -<span style="color:#ae81ff">128</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;SByte: {sb}, Min: {sbyte.MinValue}, Max: {sbyte.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h3 id="3-short">3. <strong>short</strong><a href="#3-short" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li><strong><code>decimal</code></strong>: Represents a 128-bit precise decimal value, suitable for financial calculations.
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">decimal</span> price = <span style="color:#ae81ff">19.99</span>m;
-</span></span></code></pre></div></li>
+<li><strong>Storage Size</strong>: 2 bytes</li>
+<li><strong>Min Value</strong>: -32,768</li>
+<li><strong>Max Value</strong>: 32,767</li>
+<li><strong>Type</strong>: Value</li>
 </ul>
-<h3 id="d-boolean-type">d. Boolean Type<a href="#d-boolean-type" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>The <code>short</code> data type is a 16-bit signed integer. It is used when you need a small range of integer values.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">short</span> s = <span style="color:#ae81ff">32767</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Short: {s}, Min: {short.MinValue}, Max: {short.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h3 id="4-ushort">4. <strong>ushort</strong><a href="#4-ushort" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li><strong><code>bool</code></strong>: Represents a Boolean value (<code>true</code> or <code>false</code>).
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> isActive = <span style="color:#66d9ef">true</span>;
-</span></span></code></pre></div></li>
+<li><strong>Storage Size</strong>: 2 bytes</li>
+<li><strong>Min Value</strong>: 0</li>
+<li><strong>Max Value</strong>: 65,535</li>
+<li><strong>Type</strong>: Value</li>
 </ul>
-<h3 id="e-character-type">e. Character Type<a href="#e-character-type" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>The <code>ushort</code> data type is a 16-bit unsigned integer. It is useful for storing small positive numbers.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">ushort</span> us = <span style="color:#ae81ff">65535</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;UShort: {us}, Min: {ushort.MinValue}, Max: {ushort.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h3 id="5-int">5. <strong>int</strong><a href="#5-int" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li><strong><code>char</code></strong>: Represents a single 16-bit Unicode character.
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> initial = <span style="color:#e6db74">&#39;A&#39;</span>;
-</span></span></code></pre></div></li>
+<li><strong>Storage Size</strong>: 4 bytes</li>
+<li><strong>Min Value</strong>: -2,147,483,648</li>
+<li><strong>Max Value</strong>: 2,147,483,647</li>
+<li><strong>Type</strong>: Value</li>
 </ul>
-<h2 id="2-reference-types">2. Reference Types<a href="#2-reference-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>Reference types store references to their data (objects). When you assign a reference type to another variable, both variables refer to the same object in memory.</p>
-<h3 id="a-string-type">a. String Type<a href="#a-string-type" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>The <code>int</code> data type is a 32-bit signed integer. It is the most commonly used integer type in C#.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i = -<span style="color:#ae81ff">2147483648</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Int: {i}, Min: {int.MinValue}, Max: {int.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h3 id="6-uint">6. <strong>uint</strong><a href="#6-uint" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li><strong><code>string</code></strong>: Represents a sequence of characters. Strings are immutable in C#.
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> greeting = <span style="color:#e6db74">&#34;Hello, World!&#34;</span>;
-</span></span></code></pre></div></li>
+<li><strong>Storage Size</strong>: 4 bytes</li>
+<li><strong>Min Value</strong>: 0</li>
+<li><strong>Max Value</strong>: 4,294,967,295</li>
+<li><strong>Type</strong>: Value</li>
 </ul>
-<h3 id="b-object-type">b. Object Type<a href="#b-object-type" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>The <code>uint</code> data type is a 32-bit unsigned integer. It is used when you need to store large positive numbers.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">uint</span> ui = <span style="color:#ae81ff">4294967295</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;UInt: {ui}, Min: {uint.MinValue}, Max: {uint.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h3 id="7-long">7. <strong>long</strong><a href="#7-long" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li><strong><code>object</code></strong>: The base type from which all other types derive. It can hold any data type.
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">object</span> obj = <span style="color:#e6db74">&#34;This can be any type&#34;</span>;
-</span></span></code></pre></div></li>
+<li><strong>Storage Size</strong>: 8 bytes</li>
+<li><strong>Min Value</strong>: -9,223,372,036,854,775,808</li>
+<li><strong>Max Value</strong>: 9,223,372,036,854,775,807</li>
+<li><strong>Type</strong>: Value</li>
 </ul>
-<h3 id="c-arrays">c. Arrays<a href="#c-arrays" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>The <code>long</code> data type is a 64-bit signed integer. It is used for storing large integer values.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">long</span> l = <span style="color:#ae81ff">9223372036854775807</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Long: {l}, Min: {long.MinValue}, Max: {long.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h3 id="8-ulong">8. <strong>ulong</strong><a href="#8-ulong" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li><strong>Arrays</strong>: A collection of elements of the same type.
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span>[] numbers = { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span> };
-</span></span></code></pre></div></li>
+<li><strong>Storage Size</strong>: 8 bytes</li>
+<li><strong>Min Value</strong>: 0</li>
+<li><strong>Max Value</strong>: 18,446,744,073,709,551,615</li>
+<li><strong>Type</strong>: Value</li>
 </ul>
-<h3 id="d-classes">d. Classes<a href="#d-classes" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>The <code>ulong</code> data type is a 64-bit unsigned integer. It is used for very large positive numbers.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">ulong</span> ul = <span style="color:#ae81ff">18446744073709551615</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;ULong: {ul}, Min: {ulong.MinValue}, Max: {ulong.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h3 id="9-float">9. <strong>float</strong><a href="#9-float" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li><strong>Classes</strong>: User-defined types that can contain data members and methods.
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+<li><strong>Storage Size</strong>: 4 bytes</li>
+<li><strong>Min Value</strong>: ~-3.402823E38</li>
+<li><strong>Max Value</strong>: ~3.402823E38</li>
+<li><strong>Type</strong>: Value</li>
+</ul>
+<p>The <code>float</code> data type is a single-precision 32-bit floating point. It is used for storing decimal numbers with less precision.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">float</span> f = <span style="color:#ae81ff">3.402823E38F</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Float: {f}, Min: {float.MinValue}, Max: {float.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h3 id="10-decimal">10. <strong>decimal</strong><a href="#10-decimal" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><strong>Storage Size</strong>: 16 bytes</li>
+<li><strong>Min Value</strong>: -79,228,162,514,264,337,593,543,950,335</li>
+<li><strong>Max Value</strong>: 79,228,162,514,264,337,593,543,950,335</li>
+<li><strong>Type</strong>: Value</li>
+</ul>
+<p>The <code>decimal</code> data type is a 128-bit precise decimal value with 28-29 significant digits. It is ideal for financial calculations where precision is crucial.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">decimal</span> d = <span style="color:#ae81ff">79.228162514264337593543950335</span>M;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Decimal: {d}, Min: {decimal.MinValue}, Max: {decimal.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h3 id="11-bool">11. <strong>bool</strong><a href="#11-bool" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><strong>Storage Size</strong>: 1 byte</li>
+<li><strong>Min Value</strong>: false</li>
+<li><strong>Max Value</strong>: true</li>
+<li><strong>Type</strong>: Value</li>
+</ul>
+<p>The <code>bool</code> data type represents a Boolean value, which can be either <code>true</code> or <code>false</code>. It is commonly used for conditional statements.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> flag = <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Bool: {flag}&#34;</span>);
+</span></span></code></pre></div><h3 id="12-char">12. <strong>char</strong><a href="#12-char" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><strong>Storage Size</strong>: 2 bytes</li>
+<li><strong>Min Value</strong>: &lsquo;\u0000&rsquo;</li>
+<li><strong>Max Value</strong>: &lsquo;\uFFFF&rsquo;</li>
+<li><strong>Type</strong>: Value</li>
+</ul>
+<p>The <code>char</code> data type represents a single 16-bit Unicode character. It is used for storing characters.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> c = <span style="color:#e6db74">&#39;A&#39;</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Char: {c}, Min: {char.MinValue}, Max: {char.MaxValue}&#34;</span>);
+</span></span></code></pre></div><h2 id="reference-types">Reference Types<a href="#reference-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Reference types store references to their data (objects), rather than the data itself. When you assign a reference type to a new variable, you are copying the reference, not the actual data. Here are some important reference types in C#:</p>
+<h3 id="1-string">1. <strong>string</strong><a href="#1-string" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><strong>Storage Size</strong>: Varies (depends on the length of the string)</li>
+<li><strong>Type</strong>: Reference</li>
+</ul>
+<p>The <code>string</code> data type represents a sequence of characters. Strings are immutable, meaning once created, their value cannot be changed.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str = <span style="color:#e6db74">&#34;Hello, World!&#34;</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;String: {str}, Length: {str.Length}&#34;</span>);
+</span></span></code></pre></div><h3 id="2-class">2. <strong>class</strong><a href="#2-class" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><strong>Storage Size</strong>: Varies (depends on the class definition)</li>
+<li><strong>Type</strong>: Reference</li>
+</ul>
+<p>A <code>class</code> is a blueprint for creating objects. It can contain fields, properties, methods, and events.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Age { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div></li>
-</ul>
-<h2 id="3-special-types">3. Special Types<a href="#3-special-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<h3 id="a-nullable-types">a. Nullable Types<a href="#a-nullable-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Person person = <span style="color:#66d9ef">new</span> Person { Name = <span style="color:#e6db74">&#34;Alice&#34;</span>, Age = <span style="color:#ae81ff">30</span> };
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Class: Name = {person.Name}, Age = {person.Age}&#34;</span>);
+</span></span></code></pre></div><h3 id="3-list">3. <strong>list</strong><a href="#3-list" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li><strong>Nullable Types</strong>: Allow value types to be assigned <code>null</code>.
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int?</span> nullableInt = <span style="color:#66d9ef">null</span>;
-</span></span></code></pre></div></li>
+<li><strong>Storage Size</strong>: Varies (depends on the number of elements)</li>
+<li><strong>Type</strong>: Reference</li>
 </ul>
-<h3 id="b-dynamic-type">b. Dynamic Type<a href="#b-dynamic-type" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>A <code>List&lt;T&gt;</code> is a generic collection that can dynamically resize. It is used to store a collection of objects.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; numbers = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">int</span>&gt; { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span> };
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;List: {string.Join(&#34;</span>, <span style="color:#e6db74">&#34;, numbers)}&#34;</span>);
+</span></span></code></pre></div><h3 id="4-array">4. <strong>array</strong><a href="#4-array" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
-<li><strong><code>dynamic</code></strong>: Bypasses compile-time type checking, allowing for dynamic behavior.
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">dynamic</span> anything = <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>anything = <span style="color:#e6db74">&#34;Now I&#39;m a string&#34;</span>;
-</span></span></code></pre></div></li>
+<li><strong>Storage Size</strong>: Varies (depends on the number of elements)</li>
+<li><strong>Type</strong>: Reference</li>
 </ul>
-<h2 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>Understanding the various data types in C# is essential for writing efficient and effective code. Each data type serves a specific purpose and is optimized for different scenarios. By leveraging these data types appropriately, you can enhance the performance and readability of your C# applications.</p>
-<p>Feel free to explore more about each data type and how they can be utilized in your projects! Happy coding!</p>
+<p>An <code>array</code> is a fixed-size collection of elements of the same type. It is used to store multiple values in a single variable.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span>[] array = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[] { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span> };
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Array: {string.Join(&#34;</span>, <span style="color:#e6db74">&#34;, array)}&#34;</span>);
+</span></span></code></pre></div><h3 id="5-dictionary">5. <strong>dictionary</strong><a href="#5-dictionary" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><strong>Storage Size</strong>: Varies (depends on the number of key-value pairs)</li>
+<li><strong>Type</strong>: Reference</li>
+</ul>
+<p>A <code>Dictionary&lt;TKey, TValue&gt;</code> is a collection of key-value pairs. It is used to store data in a way that allows for fast lookups by key.</p>
+<p><strong>Code Sample</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt; dictionary = <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">int</span>&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    { <span style="color:#e6db74">&#34;One&#34;</span>, <span style="color:#ae81ff">1</span> },
+</span></span><span style="display:flex;"><span>    { <span style="color:#e6db74">&#34;Two&#34;</span>, <span style="color:#ae81ff">2</span> },
+</span></span><span style="display:flex;"><span>    { <span style="color:#e6db74">&#34;Three&#34;</span>, <span style="color:#ae81ff">3</span> }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Dictionary: {string.Join(&#34;</span>, <span style="color:#e6db74">&#34;, dictionary.Select(kvp =&gt; $&#34;</span>{kvp.Key}: {kvp.Value}<span style="color:#e6db74">&#34;))}&#34;</span>);
+</span></span></code></pre></div><h2 id="summary">Summary<a href="#summary" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Understanding the differences between value types and reference types is essential for efficient memory management and performance in C#. Here’s a quick recap:</p>
+<ul>
+<li><strong>Value Types</strong>: Store data directly, have a fixed size, and are allocated on the stack. Examples include <code>byte</code>, <code>int</code>, <code>float</code>, and <code>bool</code>.</li>
+<li><strong>Reference Types</strong>: Store references to data, have variable sizes, and are allocated on the heap. Examples include <code>string</code>, <code>class</code>, <code>list</code>, <code>array</code>, and <code>dictionary</code>.</li>
+</ul>
+<p>By knowing the characteristics of these data types, you can make informed decisions about which type to use in your applications, optimizing both performance and memory usage. Understanding these types will help you write more efficient and effective C# code.</p>
 
       </div></div>
 
