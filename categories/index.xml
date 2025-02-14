@@ -17,5 +17,25 @@
       <content></content>
     </item>
     
+    <item>
+      <title>Blog</title>
+      <link>https://mishelshaji.com/categories/blog/</link>
+      <pubDate>Thu, 13 Feb 2025 18:00:41 +0530</pubDate>
+      
+      <guid>https://mishelshaji.com/categories/blog/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Writing</title>
+      <link>https://mishelshaji.com/categories/writing/</link>
+      <pubDate>Thu, 13 Feb 2025 18:00:41 +0530</pubDate>
+      
+      <guid>https://mishelshaji.com/categories/writing/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
   </channel>
 </rss>
