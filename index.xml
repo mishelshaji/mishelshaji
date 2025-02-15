@@ -6,7 +6,57 @@
     <description>Recent content on Mishel Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Feb 2025 22:10:43 +0530</lastBuildDate><atom:link href="https://mishelshaji.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Feb 2025 07:13:23 +0530</lastBuildDate><atom:link href="https://mishelshaji.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C Sharp Null Coalescing Assignment Operator</title>
+      <link>https://mishelshaji.com/blog/c-sharp-null-coalescing-assignment-operator/</link>
+      <pubDate>Sat, 15 Feb 2025 07:13:23 +0530</pubDate>
+      
+      <guid>https://mishelshaji.com/blog/c-sharp-null-coalescing-assignment-operator/</guid>
+      <description>&lt;p&gt;The Null Coalescing Assignment Operator (??=) in C sharp is used to set a default value to a variable if the value is null. This operator is similar to the Null Coalescing Operator.&lt;/p&gt;
+&lt;p&gt;If you would like to know about Null Coalescing Operator please read &lt;a href=&#34;https://mishelshaji.com/blog/c-sharp-null-coalescing-operator/&#34;&gt;this&lt;/a&gt; post.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡The null coalescing assignment operator assigns the value of the right operand to the left operand if the value of the left operand is null.
+Here&amp;rsquo;s an example.&lt;/p&gt;</description>
+      <content>&lt;p&gt;The Null Coalescing Assignment Operator (??=) in C sharp is used to set a default value to a variable if the value is null. This operator is similar to the Null Coalescing Operator.&lt;/p&gt;
+&lt;p&gt;If you would like to know about Null Coalescing Operator please read &lt;a href=&#34;https://mishelshaji.com/blog/c-sharp-null-coalescing-operator/&#34;&gt;this&lt;/a&gt; post.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡The null coalescing assignment operator assigns the value of the right operand to the left operand if the value of the left operand is null.
+Here&amp;rsquo;s an example.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int?&lt;/span&gt; i = &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;i ??= &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Console.WriteLine(i);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In this example, the value of I is null. In the next line, we are using the null coalescing assignment operator to set a default value 0 to the variable i if its value is null.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 The null coalescing assignment operator is available only in C sharp version 8 and later.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;using-null-coalescing-assignment-operator&#34;&gt;Using Null Coalescing Assignment Operator&lt;/h2&gt;
+&lt;p&gt;With the null coalescing operator we can avoid the use of if-else statements to set a default value if a variable is null.&lt;/p&gt;
+&lt;p&gt;Example with if-else:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int?&lt;/span&gt; age = &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Using If&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (age &lt;span style=&#34;color:#66d9ef&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;age = &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Console.WriteLine(&lt;span style=&#34;color:#e6db74&#34;&gt;$&amp;#34;The age is {age}&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example with Null coalescing assignment operator:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int?&lt;/span&gt; age = &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// The age will get the value 15 if age is null.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;age = age ??= &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// The answer is 15 because age was null.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Console.WriteLine(&lt;span style=&#34;color:#e6db74&#34;&gt;$&amp;#34;The age is {age}&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using-with-value-types&#34;&gt;Using with value types&lt;/h2&gt;
+&lt;p&gt;The left operand of the null coalescing operator should be either a nullable type or a reference type. We cannot use a value type as the left operand.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// The left operand (i) should not be a value type&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;i ??= &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Error&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Console.WriteLine(res);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With the null coalescing assignment operator, we can set a default value for a variable if its value is null without using the if statements.&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Null Coalescing Operator (??) in C#</title>
       <link>https://mishelshaji.com/blog/c-sharp-null-coalescing-operator/</link>
